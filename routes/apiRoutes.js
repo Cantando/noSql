@@ -39,7 +39,7 @@ router.post("/workouts", ({body},res)=>{
 
 //Get request for the stats
 
-router.get("workouts/range", (req,res)=>{
+router.get("/workouts/range", (req,res)=>{
     db.Workout.find({}).sort({day: -1}).then(dbExercises =>{
         res.json(dbExercises);
         console.log(dbExercises);
