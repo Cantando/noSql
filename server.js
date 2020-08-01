@@ -15,7 +15,7 @@ app.use(express.json());
 //seperate public js out
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://wojeil:root1992@ds331548.mlab.com:31548/heroku_p8jkfm0w", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || "", { useNewUrlParser: true, useUnifiedTopology: true });
 
 //use external routes folder 
 app.use(routes)
