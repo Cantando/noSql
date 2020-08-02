@@ -7,7 +7,12 @@ const API = {
       console.log(err)
     }
     const json = await res.json();
-
+    let completeDuration=0;
+    for (let index = 0; index < json[json.length-1].exercises.length; index++) {
+      completeDuration+= json[json.length-1].exercises[index].duration;
+      
+    }
+    json[json.length-1].totalDuration=completeDuration;
     return json[json.length - 1];
   },
   async addExercise(data) {
