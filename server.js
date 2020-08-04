@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // mongoose.connect(process.env.MONGODB_URI || "", { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout" , { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://Fitness_Tracker:rootroot1@ds263307.mlab.com:63307/heroku_k451jns4" , { useNewUrlParser: true, useUnifiedTopology: true });
 //use external routes folder 
 app.use(routes)
 
